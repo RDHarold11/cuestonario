@@ -4,6 +4,9 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 import { notFound, errorHandler } from "./middlewares/errorHandler.js";
 import connectDB from "./config/db.js";
+import cors from "cors";
+
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
