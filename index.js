@@ -6,6 +6,7 @@ import { notFound, errorHandler } from "./middlewares/errorHandler.js";
 import connectDB from "./config/db.js";
 import cors from "cors";
 
+const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
@@ -16,7 +17,6 @@ import questionRoutes from "./routes/question.routes.js";
 import resultRoutes from "./routes/results.routes.js";
 
 connectDB();
-const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
